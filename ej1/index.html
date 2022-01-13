@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tres en Raya</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./scripts/casilla.js"></script>
+    <!-- Autor: Ronald Garcia Guerrero -->
+<!-- Falta estilos de fuentes, definirlos fondos por cada tema, centrar el html -->
+</head>
+<body>
+    <header>
+        <h1>Tres en raya</h1>
+    </header>
+    <main>
+        
+        <p>Escoger avatar</p>
+        
+        <p>Selecciona un avatar para jugar</p>
+        
+        <div id="avatarSeleccionado"></div><br/>
+
+        <!-- <div>
+            <div id="circulo" onclick="asignarAvatar();"> <img src="./img/circulo.gif" alt="circulo"> </div>
+            <div id="equis"> <img src="./img/equis.gif" alt="equis"> </div>
+        </div> -->
+        <div id="seccionConfiguracion">   
+            <select name="selecAvatar" id="selectAvatar1">
+                <option value="">Seleccione uno...</option>
+                <option value="clasico">Clásico</option>
+                <option value="matrix">Matrix</option>
+                <option value="derbi">Derbi</option>
+                
+            </select> <br/>
+
+            <label for="">Jugador 1</label>
+            <input type="text" id="j1" /><br>
+            <div id="j1Imagen"></div>
+            <label for="">Jugador 2</label>
+            <input type="text" id="j2" /><br>
+            <div id="j2Imagen"></div>
+            <p></p>
+
+            <button id="iniciarPartido">Iniciar partida</button>
+            <p id="errores"></p>
+
+        </div>
+
+        <div class="tablero" style="display: none;">
+            <div class="rejilla">
+                <div class="casilla" id="c1"></div>
+                <div class="casilla" id="c2"></div>
+                <div class="casilla" id="c3"></div>
+                <div class="casilla" id="c4"></div>
+                <div class="casilla" id="c5"></div>
+                <div class="casilla" id="c6"></div>
+                <div class="casilla" id="c7"></div>
+                <div class="casilla" id="c8"></div>
+                <div class="casilla" id="c9"></div>
+            </div>
+        </div>
+        <div>
+            <p id="aviso"></p>
+        </div>
+        <div>
+            <p id="marcador"></p>
+        </div>
+        <div class="finalizar" style="display: none;">
+            <button id="reiniciar">Revancha</button>&nbsp;&nbsp;&nbsp;
+            <button id="volver">Volver al Incio</button>
+        </div>
+        <button id="verRanking">Ver ranking</button>
+        <div id="ranking"></div>
+    </main>
+    <footer>
+        <h3>Autor: Ronald Garcia Guerrero</h3>
+    </footer>
+    
+</body>
+</html>
+
+<!-- /
+       
+    / -->
