@@ -1,0 +1,9 @@
+table tr td {
+    border-color: black;
+}
+table{
+    border-collapse: collapse;
+}
+body{
+    background-color: rgb(224, 224, 224);
+}
