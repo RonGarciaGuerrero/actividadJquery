@@ -7,17 +7,17 @@ $(document).ready(function(){//todo lo que debe esperar a que se cargue la pagin
         contador = contador+1;
         
         if(contador==1){
-            $("table").append("<tr id='"+identificador+"'>");
+            $("table").append("<tr id=id"+identificador+">");
         }
         
-        $("#"+identificador).append("<td><img src='https://loremflickr.com/200/200/acnh?+"+num+"'></td>");
-        
+        $("#id"+identificador).append("<td><img src='https://loremflickr.com/200/200/acnh?+"+num+"'></td>").css('display','none');
+        $("#id"+identificador).fadeIn(2000);
         if (contador==7){    
             
             $("table").append("</tr>");
-            // $("table").append("<tr>");
             identificador++;
-            $("#"+identificador).append("<td><img src='https://loremflickr.com/200/200/acnh?+"+num+"'></td>");
+            $("#id"+identificador).append("<td><img src='https://loremflickr.com/200/200/acnh?+"+num+"'></td>").css('display','none');
+            $("#id"+identificador).fadeIn(2000);
             contador=0;
             
         }
