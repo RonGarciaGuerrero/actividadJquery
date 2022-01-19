@@ -17,11 +17,12 @@ $(document).ready(function(){//todo lo que debe esperar a que se cargue la pagin
     $("#remove").click(function(event){
         $("table tr td").last().fadeOut(2000,function(){
             $("table tr td").last().remove();
+            if ($("table tr").last().children() == 0){
+                $("table tr").last().remove();
+            }
         }); 
         
-        if ($("table tr").last().children() == 0){
-            $("table tr").last().remove();
-        }
+        
         identificador--;
     });
 });
