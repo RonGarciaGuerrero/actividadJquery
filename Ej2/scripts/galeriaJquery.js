@@ -1,26 +1,26 @@
 $(document).ready(function(){//todo lo que debe esperar a que se cargue la pagina se mete en esta función
-    let contador = 0;
     let identificador=0;
-    $("#insert").click(function(){
-        let num = event.timeStamp;
+    $("#insert").click(function(event){
+        let num = event.timeStamp;//se crea el timestamp para que vaya cambiando la imagen
+
+        let td = $("<td id="+identificador+"><img src='https://loremflickr.com/200/200/acnh?+"+num+"'></td>");
+        td.css("display","none");
+        let numfilas = $("table tr").length;//número de filas de la tabla
         
-        contador = contador+1;
-        
-        if(contador==1){
-            $("table").append("<tr id=id"+identificador+">");
+        if (numfilas==0||identificador%7==0){   //si tiene cero filas o si el id del td es multiplo de 7 se crea una fila nueva
+            $("table").append("<tr></tr>");
         }
+        identificador++;
+        $("table tr").last().append(td);//se añade el td al ultimo tr que tenga la tabla
+        $(td).fadeIn(2000);//se añade el efecto que automaticamente cambia el display a visible
+    });
+    $("#remove").click(function(event){
+        $("table tr td").last().remove(); 
         
-        $("#id"+identificador).append("<td><img src='https://loremflickr.com/200/200/acnh?+"+num+"'></td>").css('display','none');
-        $("#id"+identificador).fadeIn(2000);
-        if (contador==7){    
-            
-            $("table").append("</tr>");
-            identificador++;
-            $("#id"+identificador).append("<td><img src='https://loremflickr.com/200/200/acnh?+"+num+"'></td>").css('display','none');
-            $("#id"+identificador).fadeIn(2000);
-            contador=0;
-            
+        if ($("table tr").last().children() == 0){
+            $("table tr").last().remove();
         }
+        identificador--;
     });
 });
     
